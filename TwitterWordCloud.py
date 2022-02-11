@@ -12,7 +12,7 @@ from wordcloud import WordCloud
 from wordcloud import STOPWORDS
 
 def main():
-	image=PIL.Image.open(r'evergrain.png')
+	image=PIL.Image.open(r'image.png')
 	st.sidebar.image(image,use_column_width=True)    
 	page = st.sidebar.selectbox("Choose a page", ["Twitter"])
 	today = date.today()
@@ -20,10 +20,10 @@ def main():
 	from_date='2021-10-30'
 
 	if page == "Homepage":
-		st.write("WELCOME TO EVERGRAIN WORD CLOUDS")
+		st.write("WELCOME TO Twitter WORD CLOUDS")
 
 	elif page == "Twitter":
-		st.title("Evergrain Twitter Search")
+		st.title("Twitter Search")
 		search_term = st.text_input('search term')
 		if search_term:
 			max_results = 500
